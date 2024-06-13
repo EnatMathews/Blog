@@ -35,7 +35,7 @@ app.post("/Signin",(res,req)=>{
   blockmodel.find({"email":req.body.email}).then(
     (response)=>{
        if (response.length>0) {
-let dbPassword = response(0).pass
+let dbPassword = response[0].pass
 console.log(dbPassword)
         
        } else {
